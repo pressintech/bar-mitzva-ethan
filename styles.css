@@ -7,7 +7,18 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,Arial,sans-serif;font-weight:300}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#9b835b 0.6px,transparent .6px);background-size:9px 9px}
 h1,h2,h3,p{margin-top:0}
-.hero{min-height:100svh;padding:24px;display:grid;place-items:center}
+.hero{
+  min-height:100svh;
+  padding:24px;
+  display:grid;
+  place-items:center;
+  background-image:
+    linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)),
+    url("./assets/fond-logo-ethan.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
 .hero-frame{width:min(760px,100%);min-height:calc(100svh - 48px);border:1px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:55px 25px;position:relative;background:rgba(251,249,243,.38)}
 .bsd{position:absolute;top:18px;right:18px;color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:26px}
 .monogram,.footer-monogram{font-family:"Times New Roman",serif;color:#c6b58e;font-size:170px;line-height:.8;margin-bottom:18px;opacity:.72}
