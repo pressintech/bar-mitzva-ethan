@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3e9">
+  <title>Ethan Toboul — Bar Mitsva</title>
+  <meta name="description" content="Bar Mitsva d'Ethan Toboul — 24 décembre 2026">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Italianno&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-frame">
+        <div class="bsd">בס״ד</div>
+        <div class="monogram" aria-hidden="true">א</div>
+        <p class="eyebrow">BAR MITSVA</p>
+        <h1>ETHAN TOBOUL</h1>
+        <div class="gold-line"></div>
+        <div class="date">24.12.26</div>
+        <p class="date-caption">JEUDI 24 DÉCEMBRE 2026</p>
+        <a class="scroll-link" href="#invitation">DÉCOUVRIR L'INVITATION <span>↓</span></a>
+      </div>
+    </section>
+
+    <section class="section invitation" id="invitation">
+      <p class="section-kicker">UNE NOUVELLE ÉTAPE</p>
+      <h2>Nous avons la joie de vous inviter</h2>
+      <p class="lead">
+        À partager avec nous un moment précieux et une étape importante
+        dans la vie d'Ethan.
+      </p>
+      <div class="ornament">✦</div>
+      <p class="hebrew">ברוך הבא בשערי מצוות</p>
+    </section>
+
+    <section class="section event">
+      <p class="section-kicker">JEUDI 24 DÉCEMBRE 2026</p>
+      <h2>Mise des Téfilines<br><span>&amp;</span><br>Brunch musical</h2>
+      <div class="event-card">
+        <div class="event-place">OHEL AVRAHAM</div>
+        <div class="event-city">SAINT-BRICE-SOUS-FORÊT</div>
+        <div class="gold-line small"></div>
+        <p>Les horaires et informations pratiques seront communiqués prochainement.</p>
+        <div class="actions">
+          <a href="#infos">INFOS PRATIQUES</a>
+          <a href="#rsvp">RÉPONDRE</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section countdown-section">
+      <p class="section-kicker">EN ATTENDANT CE GRAND JOUR</p>
+      <h2>Le compte à rebours est lancé</h2>
+      <div class="countdown" aria-live="polite">
+        <div><strong id="days">--</strong><span>JOURS</span></div>
+        <div><strong id="hours">--</strong><span>HEURES</span></div>
+        <div><strong id="minutes">--</strong><span>MINUTES</span></div>
+        <div><strong id="seconds">--</strong><span>SECONDES</span></div>
+      </div>
+    </section>
+
+    <section class="section photo-section">
+      <div class="photo-wrap">
+        <img src="assets/save-the-date.png" alt="Save the Date de la Bar Mitsva d'Ethan Toboul">
+      </div>
+      <p class="photo-note">L'identité graphique du Save The Date devient le fil conducteur du site.</p>
+    </section>
+
+    <section class="section infos" id="infos">
+      <p class="section-kicker">INFOS PRATIQUES</p>
+      <h2>Tout pour nous rejoindre</h2>
+      <div class="info-grid">
+        <article>
+          <span class="icon">01</span>
+          <h3>DATE</h3>
+          <p>Jeudi 24 décembre 2026</p>
+        </article>
+        <article>
+          <span class="icon">02</span>
+          <h3>LIEU</h3>
+          <p>Ohel Avraham<br>Saint-Brice-sous-Forêt</p>
+        </article>
+        <article>
+          <span class="icon">03</span>
+          <h3>ITINÉRAIRE</h3>
+          <p>Le lien Google Maps / Waze sera ajouté ici.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section rsvp" id="rsvp">
+      <p class="section-kicker">VOTRE RÉPONSE</p>
+      <h2>Serez-vous des nôtres ?</h2>
+      <form id="rsvpForm">
+        <label>Nom de famille
+          <input name="nom" type="text" placeholder="Votre nom" required>
+        </label>
+        <label>Présence
+          <select name="presence" required>
+            <option value="">Choisir</option>
+            <option>Oui, avec plaisir</option>
+            <option>Malheureusement non</option>
+          </select>
+        </label>
+        <div class="two-cols">
+          <label>Adultes
+            <input name="adultes" type="number" min="0" value="1">
+          </label>
+          <label>Enfants
+            <input name="enfants" type="number" min="0" value="0">
+          </label>
+        </div>
+        <label>Message
+          <textarea name="message" rows="4" placeholder="Un petit mot pour Ethan…"></textarea>
+        </label>
+        <button type="submit">CONFIRMER MA PRÉSENCE</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-monogram">א</div>
+      <h2>ETHAN TOBOUL</h2>
+      <p>BAR MITSVA · 24.12.2026</p>
+      <div class="footer-star">✡</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
