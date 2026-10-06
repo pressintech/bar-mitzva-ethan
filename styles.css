@@ -213,18 +213,15 @@ h1,h2,h3,p{margin-top:0}
   color: #d9b66e;
 
   font-family: "Inter", sans-serif;
-
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 400;
 
-  letter-spacing: .46em;
-
+  letter-spacing: .38em;
   line-height: 1;
 
   white-space: nowrap;
 
-  text-shadow:
-    0 2px 12px rgba(0,0,0,.8);
+  text-shadow: 0 2px 12px rgba(0,0,0,.8);
 }
 
 /* ==================================================
@@ -269,11 +266,10 @@ h1,h2,h3,p{margin-top:0}
   margin: 0;
 
   font-family: "Inter", sans-serif;
-
-  font-size: 8px;
+  font-size: 15px;
   font-weight: 400;
 
-  letter-spacing: .34em;
+  letter-spacing: .28em;
 
   white-space: nowrap;
 }
