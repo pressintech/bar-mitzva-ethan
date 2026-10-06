@@ -1762,3 +1762,72 @@ text-align: center;
   }
 
 }
+
+
+/* =========================================================
+   DERNIERS AJUSTEMENTS TYPOGRAPHIQUES
+   ========================================================= */
+
+/* 2 — Aucun trait entre ISAAC & EDEN et le texte d'invitation */
+.invitation-line {
+  display: none;
+}
+
+/* 3 — Prénom hébreu איתן plus grand */
+.invitation-text h2 span {
+  font-size: 1.35em;
+  line-height: 1.05;
+}
+
+/* 4 — Hébreu de la paracha dans le même or que le français */
+.event-parasha-he {
+  color: var(--gold-main);
+}
+
+/* 7 — Le lieu devient plus discret, le type d'événement plus présent */
+.info-type {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 1.08;
+  color: var(--gold-light);
+}
+
+.info-location h3 {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.27em;
+  line-height: 1.4;
+  color: var(--gold-main);
+}
+
+/* 9 — Petit point entre le prénom et le téléphone */
+.footer-contact-dot {
+  display: inline-block;
+  margin: 0 7px;
+  color: var(--gold-main);
+}
+
+@media (max-width: 600px) {
+
+  .invitation-text h2 span {
+    font-size: 1.4em;
+  }
+
+  .info-type {
+    font-size: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .info-location h3 {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+  }
+
+  .footer-contact-dot {
+    margin: 0 5px;
+  }
+
+}
