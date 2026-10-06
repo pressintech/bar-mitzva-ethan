@@ -4,8 +4,21 @@
   --gold-soft:#d2bd91;--muted:#746d61;
 }
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,Arial,sans-serif;font-weight:300}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#9b835b 0.6px,transparent .6px);background-size:9px 9px}
+body {
+  margin: 0;
+
+  color: #dfbd78;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 300;
+
+  background-color: #050403;
+  background-image: url("./assets/fond-site-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 h1,h2,h3,p{margin-top:0}
 /* ==================================================
    HERO — ETHAN TOBOUL
