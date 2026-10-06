@@ -468,15 +468,21 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   max-width: 680px;
 }
 
+/* Les 3 phrases de l'invitation ont exactement
+   la même typographie : taille, couleur et italique. */
 .invitation-intro p,
 .invitation-text > p:not(.invitation-closing),
 .invitation-closing {
-  max-width: 600px;
-  margin: 38px auto 0;
+  color: #eee1c4;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
 }
 
 .invitation-intro p {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .family-names {
@@ -552,13 +558,6 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 .invitation-closing {
   max-width: 600px;
   margin: 38px auto 0;
-
-  color: rgba(235, 222, 193, 0.68);
-  font-family: "Cormorant Garamond", serif;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.55;
 }
 
 @media (max-width: 600px) {
@@ -570,10 +569,13 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   .invitation-intro p,
   .invitation-text > p:not(.invitation-closing),
   .invitation-closing {
-    margin-top: 32px;
+    font-size: 18px;
+    color: #eee1c4;
+    font-style: italic;
+    line-height: 1.5;
   }
 
-.family-names {
+  .family-names {
     margin-top: 38px;
   }
 
@@ -596,7 +598,7 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
     margin: 38px 0 34px;
   }
 
-.invitation-text h2 {
+  .invitation-text h2 {
     margin-top: 28px;
     font-size: 48px;
     letter-spacing: 4px;
@@ -609,7 +611,6 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 
   .invitation-closing {
     margin-top: 32px;
-    font-size: 17px;
   }
 
 }
