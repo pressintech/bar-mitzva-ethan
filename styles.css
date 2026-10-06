@@ -60,12 +60,9 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 
   background-color: #080706;
 
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.18),
-      rgba(0, 0, 0, 0.18)
-    ),
-    url("./assets/fond-logo-ethan.png");
+background-image:
+  linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)),
+  url("./assets/fond-ethan-sans-logo.png");
 
   background-size: cover;
   background-position: center;
