@@ -48,217 +48,411 @@ h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(38px,8
 footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.footer-monogram{font-size:95px;margin:0 0 12px}.footer h2{font-family:"Cormorant Garamond",serif;letter-spacing:.22em;font-weight:400}.footer-star{color:var(--gold);font-size:26px;margin-top:28px}
 @media(max-width:700px){.hero{padding:12px}.hero-frame{min-height:calc(100svh - 24px);padding:45px 18px}.monogram{font-size:125px}.date{font-size:82px}.date-caption{letter-spacing:.18em}.section{padding:80px 20px}.countdown{grid-template-columns:repeat(2,1fr)}.countdown div:nth-child(3){border-left:0;border-top:1px solid #d8c7a8}.countdown div:nth-child(4){border-top:1px solid #d8c7a8}.info-grid{grid-template-columns:1fr}.info-grid article{min-height:auto}.two-cols{grid-template-columns:1fr}}
 /* =========================================
-   NOUVELLE PAGE D'ACCUEIL — ETHAN
+   HERO — ETHAN TOBOUL
    ========================================= */
 
 .hero {
   min-height: 100svh;
-  padding: 0;
+  width: 100%;
+
   position: relative;
-  display: block;
   overflow: hidden;
 
   background-color: #080706;
-background-image:
-  linear-gradient(
-    rgba(0, 0, 0, 0.28),
-    rgba(0, 0, 0, 0.28)
-  ),
-  url("./assets/fond-logo-ethan.png");
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url("./assets/fond-logo-ethan.png");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+
 .hero-frame {
   width: 100%;
   height: 100svh;
   min-height: 650px;
+
   position: relative;
-  border: none;
-  background: transparent;
 }
 
-.hero-content {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
 
-.bsd {
+/* =========================================
+   בס״ד
+   ========================================= */
+
+.hero-bsd {
   position: absolute;
+
   top: 30px;
-  right: 34px;
-
-  color: #c9a96a;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-.eyebrow {
-  position: absolute;
-  top: 13%;
   left: 50%;
+
   transform: translateX(-50%);
 
+  width: min(320px, 70vw);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+}
+
+.hero-bsd span {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(201, 169, 106, 0.55);
+}
+
+.hero-bsd p {
   margin: 0;
 
   color: #c9a96a;
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 5px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
   white-space: nowrap;
 }
 
-.hero h1 {
+
+/* =========================================
+   TITRE
+   ========================================= */
+
+.hero-title {
   position: absolute;
-  top: 15%;
+
+  top: 12%;
   left: 50%;
+
   transform: translateX(-50%);
 
   width: 100%;
+
+  text-align: center;
+}
+
+
+.hero-eyebrow {
+  margin: 0 0 8px;
+
+  color: #c9a96a;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  letter-spacing: 5px;
+
+  line-height: 1;
+}
+
+
+.hero-title h1 {
   margin: 0;
 
   color: #e0c58c;
+
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(44px, 6vw, 78px);
+
+  font-size: clamp(48px, 6vw, 76px);
+
   font-weight: 500;
-  line-height: 0.88;
-  letter-spacing: 8px;
+
+  letter-spacing: 7px;
+
+  line-height: 0.95;
+
   text-align: center;
 
   text-shadow:
-    0 2px 12px rgba(0, 0, 0, 0.7);
+    0 2px 15px rgba(0, 0, 0, 0.65);
 }
 
-.gold-line {
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.hero-logo {
   position: absolute;
-  top: 39%;
+
+  top: 28%;
   left: 50%;
+
   transform: translateX(-50%);
 
-  width: 70px;
-  height: 1px;
+  width: min(430px, 42vw);
 
-  background: #c9a96a;
-  opacity: 0.8;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
 }
 
-.date {
+
+.hero-logo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  /* Le fichier contient le fond noir :
+     on utilise seulement son centre visuellement. */
+
+  mix-blend-mode: screen;
+
+  filter:
+    brightness(1.05)
+    contrast(1.05);
+}
+
+
+/* =========================================
+   DATE
+   ========================================= */
+
+.hero-date {
   position: absolute;
-  top: 61%;
+
+  top: 73%;
   left: 50%;
+
   transform: translateX(-50%);
+
+  width: 100%;
+
+  text-align: center;
+}
+
+
+.hero-date p {
+  margin: 0;
 
   color: #e0c58c;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(42px, 6vw, 72px);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
   font-weight: 400;
-  letter-spacing: 6px;
+
+  letter-spacing: 4px;
+
+  line-height: 1;
+
   white-space: nowrap;
 
   text-shadow:
-    0 2px 12px rgba(0, 0, 0, 0.8);
+    0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-.date-caption {
+
+/* =========================================
+   DÉCOUVRIR L'INVITATION
+   ========================================= */
+
+.hero-scroll {
   position: absolute;
-  top: 76%;
+
   left: 50%;
-  transform: translateX(-50%);
+  bottom: 32px;
 
-  margin: 0;
-
-  color: rgba(224, 197, 140, 0.85);
-  font-family: "Inter", sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  white-space: nowrap;
-}
-
-.scroll-link {
-  position: absolute;
-  bottom: 38px;
-  left: 50%;
   transform: translateX(-50%);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 9px;
+
+  text-decoration: none;
+
+  z-index: 5;
 
   color: #c9a96a;
-  font-family: "Inter", sans-serif;
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
-.scroll-link span {
-  font-size: 18px;
-  line-height: 1;
+
+.hero-scroll-line {
+  width: 70px;
+  height: 1px;
+
+  margin-bottom: 12px;
+
+  background: rgba(201, 169, 106, 0.65);
+}
+
+
+.hero-scroll-label {
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+
+.hero-scroll-arrow {
+  margin-top: 8px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
   font-weight: 300;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.hero-scroll:hover {
+  color: #e0c58c;
+}
+
+
+.hero-scroll:hover .hero-scroll-label {
+  letter-spacing: 3.5px;
+}
+
+
+.hero-scroll:hover .hero-scroll-arrow {
+  transform: translateY(4px);
 }
 
 
 /* =========================================
-   VERSION MOBILE
+   MOBILE
    ========================================= */
 
 @media (max-width: 600px) {
 
   .hero {
+    min-height: 100svh;
+
     background-position: center center;
   }
 
+
   .hero-frame {
-    min-height: 100svh;
+    height: 100svh;
+    min-height: 600px;
   }
 
-  .bsd {
-    top: 22px;
-    right: 22px;
+
+  /* בס״ד */
+
+  .hero-bsd {
+    top: 21px;
+
+    width: min(230px, 72vw);
+
+    gap: 12px;
+  }
+
+  .hero-bsd p {
     font-size: 13px;
   }
 
-  .eyebrow {
-    top: 12%;
-    font-size: 9px;
-    letter-spacing: 4px;
+
+  /* Titre */
+
+  .hero-title {
+    top: 13%;
   }
 
-  .hero h1 {
-    top: 17%;
-    font-size: clamp(42px, 13vw, 64px);
-    letter-spacing: 5px;
-  }
 
-  .gold-line {
-    top: 38%;
-    width: 55px;
-  }
+  .hero-eyebrow {
+    margin-bottom: 7px;
 
-  .date {
-    top: 65%;
-    font-size: clamp(34px, 11vw, 50px);
-    letter-spacing: 4px;
-  }
-
-  .date-caption {
-    top: 75%;
     font-size: 8px;
+
+    letter-spacing: 3.5px;
+  }
+
+
+  .hero-title h1 {
+    font-size: clamp(40px, 11vw, 58px);
+
+    letter-spacing: 4px;
+
+    line-height: 0.95;
+  }
+
+
+  /* Logo */
+
+  .hero-logo {
+    top: 30%;
+
+    width: min(330px, 72vw);
+  }
+
+
+  /* Date */
+
+  .hero-date {
+    top: 72%;
+  }
+
+
+  .hero-date p {
+    font-size: 8px;
+
     letter-spacing: 2.5px;
   }
 
-  .scroll-link {
-    bottom: 28px;
-    font-size: 8px;
-    letter-spacing: 2.5px;
+
+  /* Invitation */
+
+  .hero-scroll {
+    bottom: 25px;
+  }
+
+
+  .hero-scroll-line {
+    width: 52px;
+
+    margin-bottom: 10px;
+  }
+
+
+  .hero-scroll-label {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .hero-scroll-arrow {
+    margin-top: 7px;
+
+    font-size: 18px;
   }
 
 }
