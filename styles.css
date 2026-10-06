@@ -1380,3 +1380,44 @@ text-align: center;
   }
 
 }
+
+
+/* =========================================
+   FOOTER — VERSION COMPACTE
+   ========================================= */
+
+.footer {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  min-height: 0;
+}
+
+.footer-message {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.footer-contacts {
+  margin-top: 0;
+}
+
+.footer-contacts p {
+  margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .footer-message {
+    margin-bottom: 16px;
+  }
+
+  .footer-contacts {
+    margin-top: 0;
+  }
+
+}
