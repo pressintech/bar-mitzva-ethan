@@ -196,14 +196,10 @@ h1,h2,h3,p{margin-top:0}
 
 .hero-date {
   position: absolute;
-
-  top: 85%;
+  top: 80%;
   left: 50%;
-
   transform: translateX(-50%);
-
   width: 100%;
-
   text-align: center;
 }
 
@@ -230,10 +226,8 @@ h1,h2,h3,p{margin-top:0}
 
 .hero-scroll {
   position: absolute;
-
   left: 50%;
-  bottom: 1.5%;
-
+  bottom: 0.5%;
   transform: translateX(-50%);
 
   display: flex;
@@ -241,7 +235,6 @@ h1,h2,h3,p{margin-top:0}
   align-items: center;
 
   color: #d0a653;
-
   text-decoration: none;
 }
 
