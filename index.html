@@ -206,35 +206,80 @@
 
 </section>
 
-    <section class="section rsvp" id="rsvp">
-      <p class="section-kicker">VOTRE RÉPONSE</p>
-      <h2>Serez-vous des nôtres ?</h2>
-      <form id="rsvpForm">
-        <label>Nom de famille
-          <input name="nom" type="text" placeholder="Votre nom" required>
-        </label>
-        <label>Présence
-          <select name="presence" required>
-            <option value="">Choisir</option>
-            <option>Oui, avec plaisir</option>
-            <option>Malheureusement non</option>
-          </select>
-        </label>
-        <div class="two-cols">
-          <label>Adultes
-            <input name="adultes" type="number" min="0" value="1">
-          </label>
-          <label>Enfants
-            <input name="enfants" type="number" min="0" value="0">
-          </label>
-        </div>
-        <label>Message
-          <textarea name="message" rows="4" placeholder="Un petit mot pour Ethan…"></textarea>
-        </label>
-        <button type="submit">CONFIRMER MA PRÉSENCE</button>
-        <p id="formMessage" class="form-message"></p>
-      </form>
-    </section>
+<section class="section rsvp" id="rsvp">
+
+  <p class="section-kicker">VOTRE RÉPONSE</p>
+
+  <h2>Serez-vous des nôtres ?</h2>
+
+  <p class="rsvp-intro">
+    Merci de nous confirmer votre présence afin de nous permettre
+    de préparer au mieux ces précieux moments.
+  </p>
+
+  <form id="rsvpForm">
+
+    <label>
+      Nom &amp; prénom
+      <input
+        name="nom"
+        type="text"
+        placeholder="Votre nom et prénom"
+        required
+      >
+    </label>
+
+    <label>
+      Présence
+      <select name="presence" required>
+        <option value="">Choisir</option>
+        <option value="oui">Oui, avec plaisir</option>
+        <option value="non">Malheureusement non</option>
+      </select>
+    </label>
+
+    <div class="two-cols">
+
+      <label>
+        Adultes
+        <input
+          name="adultes"
+          type="number"
+          min="0"
+          value="1"
+        >
+      </label>
+
+      <label>
+        Enfants
+        <input
+          name="enfants"
+          type="number"
+          min="0"
+          value="0"
+        >
+      </label>
+
+    </div>
+
+    <label>
+      Un petit mot pour Ethan
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Votre message..."
+      ></textarea>
+    </label>
+
+    <button type="submit">
+      CONFIRMER MA RÉPONSE
+    </button>
+
+    <p id="formMessage" class="form-message"></p>
+
+  </form>
+
+</section>
 
     <footer>
       <div class="footer-monogram">א</div>
