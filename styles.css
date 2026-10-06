@@ -124,16 +124,16 @@ h1,h2,h3,p{margin-top:0}
 }
 
 .hero-eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 17px;
 
   color: #d1aa61;
 
   font-family: "Inter", sans-serif;
-
-  font-size: 11px;
+  
+  font-size: 15px;
   font-weight: 400;
 
-  letter-spacing: .52em;
+  letter-spacing: .55em;
   line-height: 1;
 }
 
