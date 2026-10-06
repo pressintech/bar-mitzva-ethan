@@ -907,3 +907,97 @@ background-image:
   }
 
 }
+/* =========================================
+   FOOTER — CONCLUSION
+   ========================================= */
+
+.footer {
+  min-height: 48svh;
+  padding: 90px 24px 55px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(8, 7, 6, 0.98),
+      rgba(8, 7, 6, 1)
+    ),
+    url("./assets/fond-logo-ethan.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-line {
+  width: 55px;
+  height: 1px;
+  margin-bottom: 40px;
+
+  background: #c9a96a;
+  opacity: 0.7;
+}
+
+.footer-name {
+  margin: 0;
+
+  color: #e0c58c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 500;
+  letter-spacing: 6px;
+  line-height: 1;
+}
+
+.footer-message {
+  max-width: 500px;
+  margin: 28px auto 0;
+
+  color: rgba(235, 222, 193, 0.7);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.footer-family {
+  margin: 38px 0 0;
+
+  color: rgba(201, 169, 106, 0.75);
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.footer-ornament {
+  margin-top: 50px;
+
+  color: rgba(201, 169, 106, 0.6);
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+
+  .footer {
+    min-height: 45svh;
+    padding: 75px 22px 45px;
+  }
+
+  .footer-name {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  .footer-message {
+    font-size: 17px;
+  }
+
+  .footer-family {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+}
