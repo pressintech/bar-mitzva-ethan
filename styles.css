@@ -7,135 +7,183 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,Arial,sans-serif;font-weight:300}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#9b835b 0.6px,transparent .6px);background-size:9px 9px}
 h1,h2,h3,p{margin-top:0}
-/* =========================
-   HERO ETHAN
-========================= */
+/* ==================================================
+   HERO — ETHAN TOBOUL
+   Composition basée sur la maquette de référence
+================================================== */
 
 .hero {
   position: relative;
+
   width: 100%;
-  min-height: 100svh;
-  padding: 24px;
+  height: 100svh;
+  min-height: 650px;
+
+  padding: 0;
+
   overflow: hidden;
 
-  display: grid;
-  place-items: center;
-
-  background-color: #070605;
+  background-color: #050403;
   background-image: url("./assets/fond-ethan-sans-logo.png");
-  background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
+
+
+/* Légère profondeur sur le fond */
 
 .hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.08);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0) 25%,
+      rgba(0,0,0,.12) 100%
+    );
+
   pointer-events: none;
 }
+
+
+/* CADRE */
 
 .hero-frame {
   position: relative;
   z-index: 1;
 
   width: 100%;
-  min-height: calc(100svh - 48px);
-
-  border: 1px solid rgba(181, 138, 66, 0.75);
+  height: 100%;
 
   text-align: center;
 }
 
 
-/* בס״ד */
+/* ==================================================
+   בס״ד
+================================================== */
 
 .hero-bsd {
   position: absolute;
-  top: 4.5%;
+
+  top: 6.5%;
   left: 50%;
+
   transform: translateX(-50%);
 
-  width: min(340px, 65vw);
+  width: min(320px, 38vw);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+
+  gap: 26px;
 }
 
+
 .hero-bsd span {
+  display: block;
+
   flex: 1;
+
   height: 1px;
-  background: rgba(181, 138, 66, 0.65);
+
+  background: rgba(205, 164, 86, .72);
 }
+
 
 .hero-bsd p {
   margin: 0;
 
-  color: #c9a96a;
+  color: #d2ad66;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
+
+  font-size: 18px;
+  font-weight: 500;
+
   line-height: 1;
+
+  white-space: nowrap;
 }
 
 
-/* TITRE */
+/* ==================================================
+   TITRE
+================================================== */
 
 .hero-title {
   position: absolute;
-  top: 11%;
+
+  top: 14%;
   left: 50%;
+
+  transform: translateX(-50%);
 
   width: 100%;
 
-  transform: translateX(-50%);
   text-align: center;
 }
 
-.hero-eyebrow {
-  margin: 0 0 12px;
 
-  color: #c9a96a;
+.hero-eyebrow {
+  margin: 0 0 17px;
+
+  color: #d1aa61;
 
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+
+  font-size: 13px;
   font-weight: 400;
 
-  letter-spacing: 5px;
+  letter-spacing: .55em;
+  line-height: 1;
 }
+
 
 .hero-title h1 {
   margin: 0;
 
-  color: #dfc183;
+  color: #dfbd78;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(46px, 5.2vw, 72px);
+
+  font-size: clamp(54px, 5.5vw, 88px);
   font-weight: 500;
 
-  letter-spacing: 7px;
-  line-height: 1;
+  letter-spacing: .11em;
+  line-height: .95;
 
-  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+
+  text-shadow:
+    0 3px 18px rgba(0,0,0,.8);
 }
 
 
-/* LOGO */
+/* ==================================================
+   LOGO
+================================================== */
 
 .hero-logo {
   position: absolute;
-  top: 29%;
+
+  top: 31%;
   left: 50%;
+
   transform: translateX(-50%);
-  width: min(300px, 27vw);
+
+  width: min(285px, 23vw);
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .hero-logo img {
   display: block;
@@ -146,47 +194,61 @@ h1,h2,h3,p{margin-top:0}
   object-fit: contain;
 
   filter:
-    brightness(.95)
-    contrast(1.04)
-    drop-shadow(0 10px 25px rgba(0, 0, 0, .5));
+    brightness(.90)
+    contrast(1.02)
+    saturate(.92)
+    drop-shadow(0 8px 20px rgba(0,0,0,.55));
 }
 
 
-/* DATE */
+/* ==================================================
+   DATE
+================================================== */
 
 .hero-date {
   position: absolute;
-  top: 71%;
+
+  top: 68%;
   left: 50%;
+
   transform: translateX(-50%);
 
   width: 100%;
+
   text-align: center;
 }
+
 
 .hero-date p {
   margin: 0;
 
-  color: #d7b873;
+  color: #d9b66e;
 
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+
+  font-size: 13px;
   font-weight: 400;
 
-  letter-spacing: 4px;
+  letter-spacing: .48em;
+
+  line-height: 1;
+
   white-space: nowrap;
 
-  text-shadow: 0 2px 10px rgba(0,0,0,.8);
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.8);
 }
 
 
-/* DÉCOUVRIR L'INVITATION */
+/* ==================================================
+   DÉCOUVRIR L'INVITATION
+================================================== */
 
 .hero-scroll {
   position: absolute;
 
   left: 50%;
-  bottom: 4%;
+  bottom: 5%;
 
   transform: translateX(-50%);
 
@@ -194,116 +256,188 @@ h1,h2,h3,p{margin-top:0}
   flex-direction: column;
   align-items: center;
 
-  color: #c9a96a;
+  color: #d0a653;
+
   text-decoration: none;
 }
 
-.hero-scroll-line {
-  width: 60px;
-  height: 1px;
 
-  margin-bottom: 12px;
+.hero-scroll-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background: rgba(201, 169, 106, .65);
+  gap: 22px;
 }
 
-.hero-scroll-label {
+
+.hero-scroll-title span {
+  display: block;
+
+  width: 82px;
+  height: 1px;
+
+  background: rgba(205,164,86,.8);
+}
+
+
+.hero-scroll-title p {
+  margin: 0;
+
   font-family: "Inter", sans-serif;
-  font-size: 8px;
+
+  font-size: 9px;
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: .36em;
 
   white-space: nowrap;
 }
 
+
 .hero-scroll-arrow {
-  margin-top: 9px;
+  margin-top: 15px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
+
+  font-size: 27px;
+  font-weight: 300;
+
   line-height: 1;
+
+  transition: transform .3s ease;
 }
 
-.hero-scroll:hover {
-  color: #ead095;
-}
 
 .hero-scroll:hover .hero-scroll-arrow {
-  transform: translateY(4px);
+  transform: translateY(5px);
 }
 
 
-/* MOBILE */
+/* ==================================================
+   TABLETTE
+================================================== */
 
-@media (max-width: 700px) {
-
-  .hero {
-    padding: 12px;
-    min-height: 100svh;
-  }
-
-  .hero-frame {
-    min-height: calc(100svh - 24px);
-  }
+@media (max-width: 900px) {
 
   .hero-bsd {
-    top: 3.5%;
-    width: 220px;
-    gap: 12px;
-  }
-
-  .hero-bsd p {
-    font-size: 12px;
-  }
-
-  .hero-title {
-    top: 11%;
-  }
-
-  .hero-eyebrow {
-    margin-bottom: 9px;
-
-    font-size: 8px;
-    letter-spacing: 3.5px;
+    width: 280px;
   }
 
   .hero-title h1 {
-    font-size: clamp(37px, 10vw, 52px);
-    letter-spacing: 3px;
+    font-size: clamp(48px, 7vw, 68px);
   }
 
   .hero-logo {
-    top: 29%;
-    width: min(250px, 60vw);
+    width: min(275px, 34vw);
   }
-  
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: 100svh;
+    min-height: 620px;
+
+    /*
+      Le fond reste centré afin de conserver
+      les flammes latérales.
+    */
+    background-position: center center;
+  }
+
+
+  /* בס״ד */
+
+  .hero-bsd {
+    top: 4.5%;
+
+    width: 220px;
+
+    gap: 14px;
+  }
+
+  .hero-bsd p {
+    font-size: 14px;
+  }
+
+
+  /* TITRE */
+
+  .hero-title {
+    top: 12%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 9px;
+
+    letter-spacing: .48em;
+  }
+
+  .hero-title h1 {
+    padding: 0 12px;
+
+    font-size: clamp(38px, 11vw, 52px);
+
+    letter-spacing: .055em;
+
+    white-space: nowrap;
+  }
+
+
+  /* LOGO */
+
+  .hero-logo {
+    top: 31%;
+
+    width: min(250px, 61vw);
+  }
+
+
+  /* DATE */
+
   .hero-date {
     top: 68%;
   }
 
   .hero-date p {
     font-size: 8px;
-    letter-spacing: 2.2px;
+
+    letter-spacing: .28em;
   }
+
+
+  /* DÉCOUVRIR */
 
   .hero-scroll {
-    bottom: 3%;
+    bottom: 4%;
   }
 
-  .hero-scroll-line {
-    width: 48px;
-    margin-bottom: 9px;
+  .hero-scroll-title {
+    gap: 11px;
   }
 
-  .hero-scroll-label {
+  .hero-scroll-title span {
+    width: 35px;
+  }
+
+  .hero-scroll-title p {
     font-size: 7px;
-    letter-spacing: 2px;
+
+    letter-spacing: .23em;
   }
 
   .hero-scroll-arrow {
-    margin-top: 7px;
-    font-size: 18px;
+    margin-top: 10px;
+
+    font-size: 22px;
   }
 }
 .section{padding:110px 24px;max-width:1050px;margin:auto;text-align:center}
@@ -329,134 +463,183 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   .info-grid article{min-height:auto}
   .two-cols{grid-template-columns:1fr}
 }
-/* ========================================
+/* ==================================================
    HERO — ETHAN TOBOUL
-======================================== */
+   Composition basée sur la maquette de référence
+================================================== */
 
 .hero {
   position: relative;
+
   width: 100%;
-  min-height: 100svh;
+  height: 100svh;
+  min-height: 650px;
+
+  padding: 0;
+
   overflow: hidden;
 
-  background-color: #080706;
+  background-color: #050403;
   background-image: url("./assets/fond-ethan-sans-logo.png");
-  background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-/* Assombrit légèrement le fond sans créer de voile gris */
+
+/* Légère profondeur sur le fond */
+
 .hero::before {
   content: "";
+
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.12);
-  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0) 25%,
+      rgba(0,0,0,.12) 100%
+    );
+
   pointer-events: none;
 }
+
+
+/* CADRE */
 
 .hero-frame {
   position: relative;
   z-index: 1;
 
   width: 100%;
-  height: 100svh;
-  min-height: 700px;
+  height: 100%;
 
-  border: 1px solid rgba(201, 169, 106, 0.65);
-  box-sizing: border-box;
+  text-align: center;
 }
 
 
-/* ---------- בס״ד ---------- */
+/* ==================================================
+   בס״ד
+================================================== */
 
 .hero-bsd {
   position: absolute;
-  top: 4.5%;
+
+  top: 6.5%;
   left: 50%;
+
   transform: translateX(-50%);
 
-  width: min(340px, 65vw);
+  width: min(320px, 38vw);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+
+  gap: 26px;
 }
 
+
 .hero-bsd span {
+  display: block;
+
   flex: 1;
+
   height: 1px;
-  background: rgba(201, 169, 106, 0.55);
+
+  background: rgba(205, 164, 86, .72);
 }
+
 
 .hero-bsd p {
   margin: 0;
 
-  color: #c9a96a;
+  color: #d2ad66;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
+
+  font-size: 18px;
   font-weight: 500;
+
   line-height: 1;
 
   white-space: nowrap;
 }
 
 
-/* ---------- TITRE ---------- */
+/* ==================================================
+   TITRE
+================================================== */
 
 .hero-title {
   position: absolute;
-  top: 11%;
+
+  top: 14%;
   left: 50%;
+
   transform: translateX(-50%);
 
   width: 100%;
+
   text-align: center;
 }
 
-.hero-eyebrow {
-  margin: 0 0 12px;
 
-  color: #c9a96a;
+.hero-eyebrow {
+  margin: 0 0 17px;
+
+  color: #d1aa61;
 
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 5px;
+
+  letter-spacing: .55em;
+  line-height: 1;
 }
+
 
 .hero-title h1 {
   margin: 0;
 
-  color: #dfc183;
+  color: #dfbd78;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(48px, 5.2vw, 72px);
+
+  font-size: clamp(54px, 5.5vw, 88px);
   font-weight: 500;
 
-  letter-spacing: 7px;
-  line-height: 1;
+  letter-spacing: .11em;
+  line-height: .95;
 
-  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+
+  text-shadow:
+    0 3px 18px rgba(0,0,0,.8);
 }
 
 
-/* ---------- LOGO ---------- */
+/* ==================================================
+   LOGO
+================================================== */
 
 .hero-logo {
   position: absolute;
-  top: 29%;
+
+  top: 31%;
   left: 50%;
+
   transform: translateX(-50%);
-  width: min(300px, 27vw);
+
+  width: min(285px, 23vw);
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .hero-logo img {
   display: block;
@@ -467,47 +650,61 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   object-fit: contain;
 
   filter:
-    brightness(0.95)
-    contrast(1.04)
-    drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+    brightness(.90)
+    contrast(1.02)
+    saturate(.92)
+    drop-shadow(0 8px 20px rgba(0,0,0,.55));
 }
 
 
-/* ---------- DATE ---------- */
+/* ==================================================
+   DATE
+================================================== */
 
 .hero-date {
   position: absolute;
-  top: 71%;
+
+  top: 68%;
   left: 50%;
+
   transform: translateX(-50%);
 
   width: 100%;
+
   text-align: center;
 }
+
 
 .hero-date p {
   margin: 0;
 
-  color: #d7b873;
+  color: #d9b66e;
 
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+
+  font-size: 13px;
   font-weight: 400;
 
-  letter-spacing: 4px;
+  letter-spacing: .48em;
+
+  line-height: 1;
+
   white-space: nowrap;
 
-  text-shadow: 0 2px 10px rgba(0,0,0,.8);
+  text-shadow:
+    0 2px 12px rgba(0,0,0,.8);
 }
 
 
-/* ---------- DÉCOUVRIR ---------- */
+/* ==================================================
+   DÉCOUVRIR L'INVITATION
+================================================== */
 
 .hero-scroll {
   position: absolute;
 
   left: 50%;
-  bottom: 4%;
+  bottom: 5%;
 
   transform: translateX(-50%);
 
@@ -515,101 +712,152 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   flex-direction: column;
   align-items: center;
 
-  color: #c9a96a;
-  text-decoration: none;
+  color: #d0a653;
 
-  z-index: 5;
+  text-decoration: none;
 }
 
-.hero-scroll-line {
-  width: 60px;
+
+.hero-scroll-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+}
+
+
+.hero-scroll-title span {
+  display: block;
+
+  width: 82px;
   height: 1px;
 
-  margin-bottom: 12px;
-
-  background: rgba(201, 169, 106, 0.65);
+  background: rgba(205,164,86,.8);
 }
 
-.hero-scroll-label {
+
+.hero-scroll-title p {
+  margin: 0;
+
   font-family: "Inter", sans-serif;
 
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: .36em;
 
   white-space: nowrap;
-
-  transition:
-    color 0.3s ease,
-    letter-spacing 0.3s ease;
 }
 
+
 .hero-scroll-arrow {
-  margin-top: 9px;
+  margin-top: 15px;
 
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 20px;
+  font-size: 27px;
+  font-weight: 300;
+
   line-height: 1;
 
-  transition: transform 0.3s ease;
+  transition: transform .3s ease;
 }
 
-.hero-scroll:hover {
-  color: #e6ca8d;
-}
 
 .hero-scroll:hover .hero-scroll-arrow {
-  transform: translateY(4px);
+  transform: translateY(5px);
 }
 
 
-/* ========================================
-   MOBILE
-======================================== */
+/* ==================================================
+   TABLETTE
+================================================== */
 
-@media (max-width: 700px) {
-
-  .hero {
-    min-height: 100svh;
-    background-position: center center;
-  }
-
-  .hero-frame {
-    height: 100svh;
-    min-height: 620px;
-  }
+@media (max-width: 900px) {
 
   .hero-bsd {
-    top: 3.5%;
-    width: 220px;
-    gap: 12px;
-  }
-
-  .hero-bsd p {
-    font-size: 12px;
-  }
-
-  .hero-title {
-    top: 11%;
-  }
-
-  .hero-eyebrow {
-    margin-bottom: 9px;
-    font-size: 8px;
-    letter-spacing: 3.5px;
+    width: 280px;
   }
 
   .hero-title h1 {
-    font-size: clamp(38px, 10vw, 52px);
-    letter-spacing: 3px;
+    font-size: clamp(48px, 7vw, 68px);
   }
 
   .hero-logo {
-    top: 29%;
-    width: min(250px, 60vw);
+    width: min(275px, 34vw);
   }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: 100svh;
+    min-height: 620px;
+
+    /*
+      Le fond reste centré afin de conserver
+      les flammes latérales.
+    */
+    background-position: center center;
+  }
+
+
+  /* בס״ד */
+
+  .hero-bsd {
+    top: 4.5%;
+
+    width: 220px;
+
+    gap: 14px;
+  }
+
+  .hero-bsd p {
+    font-size: 14px;
+  }
+
+
+  /* TITRE */
+
+  .hero-title {
+    top: 12%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 9px;
+
+    letter-spacing: .48em;
+  }
+
+  .hero-title h1 {
+    padding: 0 12px;
+
+    font-size: clamp(38px, 11vw, 52px);
+
+    letter-spacing: .055em;
+
+    white-space: nowrap;
+  }
+
+
+  /* LOGO */
+
+  .hero-logo {
+    top: 31%;
+
+    width: min(250px, 61vw);
+  }
+
+
+  /* DATE */
 
   .hero-date {
     top: 68%;
@@ -617,139 +865,36 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 
   .hero-date p {
     font-size: 8px;
-    letter-spacing: 2.2px;
+
+    letter-spacing: .28em;
   }
+
+
+  /* DÉCOUVRIR */
 
   .hero-scroll {
-    bottom: 3%;
+    bottom: 4%;
   }
 
-  .hero-scroll-line {
-    width: 48px;
-    margin-bottom: 9px;
+  .hero-scroll-title {
+    gap: 11px;
   }
 
-  .hero-scroll-label {
+  .hero-scroll-title span {
+    width: 35px;
+  }
+
+  .hero-scroll-title p {
     font-size: 7px;
-    letter-spacing: 2px;
+
+    letter-spacing: .23em;
   }
 
   .hero-scroll-arrow {
-    margin-top: 7px;
-    font-size: 18px;
+    margin-top: 10px;
+
+    font-size: 22px;
   }
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 600px) {
-
-  .hero {
-    min-height: 100svh;
-
-    background-position: center center;
-  }
-
-
-  .hero-frame {
-    height: 100svh;
-    min-height: 600px;
-  }
-
-
-  /* בס״ד */
-
-  .hero-bsd {
-    top: 21px;
-
-    width: min(230px, 72vw);
-
-    gap: 12px;
-  }
-
-  .hero-bsd p {
-    font-size: 13px;
-  }
-
-
-  /* Titre */
-
-  .hero-title {
-    top: 13%;
-  }
-
-
-  .hero-eyebrow {
-    margin-bottom: 7px;
-
-    font-size: 8px;
-
-    letter-spacing: 3.5px;
-  }
-
-
-  .hero-title h1 {
-    font-size: clamp(40px, 11vw, 58px);
-
-    letter-spacing: 4px;
-
-    line-height: 0.95;
-  }
-
-
-  /* Logo */
-
-  .hero-logo {
-    top: 30%;
-
-    width: min(330px, 72vw);
-  }
-
-
-  /* Date */
-
-  .hero-date {
-    top: 72%;
-  }
-
-
-  .hero-date p {
-    font-size: 8px;
-
-    letter-spacing: 2.5px;
-  }
-
-
-  /* Invitation */
-
-  .hero-scroll {
-    bottom: 25px;
-  }
-
-
-  .hero-scroll-line {
-    width: 52px;
-
-    margin-bottom: 10px;
-  }
-
-
-  .hero-scroll-label {
-    font-size: 7px;
-
-    letter-spacing: 2px;
-  }
-
-
-  .hero-scroll-arrow {
-    margin-top: 7px;
-
-    font-size: 18px;
-  }
-
 }
 /* =========================================
    INVITATION — FAMILLE & ETHAN
