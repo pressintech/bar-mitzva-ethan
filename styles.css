@@ -1831,3 +1831,24 @@ text-align: center;
   }
 
 }
+
+
+/* =========================================================
+   AJUSTEMENTS — ISAAC & EDEN / INFORMATIONS PRATIQUES
+   ========================================================= */
+
+/* Plus d'espace après ISAAC & EDEN */
+.siblings-name {
+  margin-bottom: 42px !important;
+}
+
+/* Sécurité : masquer tout ancien numéro 01 / 02 éventuellement présent */
+.info-number {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .siblings-name {
+    margin-bottom: 34px !important;
+  }
+}
