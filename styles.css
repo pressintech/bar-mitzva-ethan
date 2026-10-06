@@ -1284,6 +1284,73 @@ text-align: center;
 
 }
 
+
+/* =========================================
+   INFORMATIONS PRATIQUES — ADRESSE COMMUNE
+   ========================================= */
+
+.info-shared-location {
+  width: 100%;
+  max-width: 520px;
+  margin: 55px auto 0;
+  text-align: center;
+}
+
+.info-shared-location .info-address {
+  margin: 0 0 28px;
+}
+
+.info-shared-location .info-button {
+  margin: 0;
+}
+
+/* =========================================
+   FOOTER — CONTACTS
+   ========================================= */
+
+.footer-contacts {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.footer-contacts p {
+  margin: 7px 0;
+
+  color: #c9a96a;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.footer-contacts a {
+  color: #eee1c4;
+  text-decoration: none;
+}
+
+.footer-contacts a:hover {
+  color: #e0c58c;
+}
+
+@media (max-width: 700px) {
+
+  .info-shared-location {
+    margin-top: 55px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .footer-contacts {
+    margin-top: 24px;
+  }
+
+  .footer-contacts p {
+    font-size: 17px;
+  }
+
+}
+
 /* =========================================
    FOND GLOBAL — MOBILE
    ========================================= */
