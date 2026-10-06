@@ -452,15 +452,8 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   justify-content: center;
   text-align: center;
 
-  background:
-    linear-gradient(
-      rgba(8, 7, 6, 0.96),
-      rgba(8, 7, 6, 0.98)
-    ),
-    url("./assets/fond-logo-ethan.png");
+  background: rgba(5, 4, 3, 0.78);
 
-  background-size: cover;
-  background-position: center;
 }
 
 .family-names {
@@ -557,17 +550,9 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 .events {
   min-height: 100svh;
   padding: 130px 24px;
-  background:
-    linear-gradient(
-      rgba(8, 7, 6, 0.96),
-      rgba(8, 7, 6, 0.98)
-    ),
-    url("./assets/fond-logo-ethan.png");
 
-  background-size: cover;
-  background-position: center;
-
-  text-align: center;
+  background: rgba(5, 4, 3, 0.78);
+text-align: center;
 }
 
 .event-block {
@@ -759,17 +744,8 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
   min-height: 100svh;
   padding: 130px 24px;
 
-  background:
-    linear-gradient(
-      rgba(8, 7, 6, 0.97),
-      rgba(8, 7, 6, 0.99)
-    ),
-    url("./assets/fond-logo-ethan.png");
-
-  background-size: cover;
-  background-position: center;
-
-  text-align: center;
+  background: rgba(5, 4, 3, 0.78);
+text-align: center;
 }
 
 .infos .section-kicker {
@@ -1099,15 +1075,8 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 
   text-align: center;
 
-  background:
-    linear-gradient(
-      rgba(8, 7, 6, 0.98),
-      rgba(8, 7, 6, 1)
-    ),
-    url("./assets/fond-logo-ethan.png");
+  background: rgba(5, 4, 3, 0.78);
 
-  background-size: cover;
-  background-position: center;
 }
 
 .footer-line {
@@ -1177,4 +1146,15 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
     letter-spacing: 2.5px;
   }
 
+}
+
+/* =========================================
+   FOND GLOBAL — MOBILE
+   ========================================= */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+  }
 }
