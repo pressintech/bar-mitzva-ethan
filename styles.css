@@ -1421,3 +1421,344 @@ text-align: center;
   }
 
 }
+
+
+/* =========================================================
+   HARMONISATION TYPOGRAPHIQUE FINALE
+   Cormorant Garamond = émotion / élégance
+   Inter = informations / repères fonctionnels
+   ========================================================= */
+
+:root {
+  --gold-main: #c9a96a;
+  --gold-light: #dfbd78;
+  --pearl: #eee1c4;
+  --pearl-soft: rgba(238, 225, 196, 0.76);
+}
+
+/* ---------- TITRES DE SECTION ---------- */
+
+.events h2,
+.infos > h2,
+.rsvp > h2 {
+  color: var(--gold-light);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.infos > h2,
+.rsvp > h2 {
+  font-size: 38px;
+  letter-spacing: 0.015em;
+}
+
+/* ---------- SUR-TITRES / REPÈRES ---------- */
+
+.infos .section-kicker,
+.rsvp .section-kicker,
+.event-date,
+.event-hebrew-date,
+.event-label,
+.info-type {
+  color: var(--gold-main);
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.infos .section-kicker,
+.rsvp .section-kicker {
+  font-size: 12px;
+  letter-spacing: 0.34em;
+}
+
+.event-date {
+  font-size: 13px;
+  letter-spacing: 0.27em;
+}
+
+.event-hebrew-date {
+  color: var(--pearl-soft);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.event-label,
+.info-type {
+  font-size: 11px;
+  letter-spacing: 0.27em;
+}
+
+/* ---------- INVITATION ---------- */
+
+.invitation-intro p,
+.invitation-text > p:not(.invitation-closing),
+.invitation-closing {
+  color: var(--pearl);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.family-role {
+  color: var(--pearl-soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.family-name {
+  color: var(--gold-main);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+  line-height: 1.3;
+}
+
+/* ---------- ÉVÉNEMENTS ---------- */
+
+.events .event-block > h2 {
+  font-size: 36px;
+  letter-spacing: 0.045em;
+}
+
+.event-time {
+  color: var(--gold-light);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+}
+
+.event-details {
+  color: var(--pearl);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.event-place {
+  color: var(--gold-light);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.055em;
+}
+
+.event-parasha {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.event-parasha-fr {
+  display: block;
+  color: var(--gold-main);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
+}
+
+.event-parasha-he {
+  display: block;
+  margin-top: 7px;
+  color: var(--pearl);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.event-kiddouch {
+  color: var(--gold-main);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.23em;
+}
+
+/* ---------- INFORMATIONS PRATIQUES ---------- */
+
+.info-number {
+  color: var(--gold-main);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.info-location h3 {
+  color: var(--gold-light);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 1.08;
+}
+
+.info-address,
+.info-shared-location .info-address {
+  color: var(--pearl);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.info-button {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+}
+
+/* ---------- RSVP ---------- */
+
+.rsvp-intro {
+  color: var(--pearl);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.rsvp label {
+  color: var(--gold-light);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.rsvp input,
+.rsvp select,
+.rsvp textarea {
+  color: var(--pearl);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.rsvp button {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+/* ---------- FOOTER / SIGNATURE ---------- */
+
+.footer-message {
+  color: var(--pearl);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.footer-contacts p {
+  color: var(--gold-main);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.045em;
+  line-height: 1.45;
+}
+
+.footer-contacts a {
+  color: var(--pearl);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 300;
+  letter-spacing: 0.055em;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+  .invitation-intro p,
+  .invitation-text > p:not(.invitation-closing),
+  .invitation-closing {
+    font-size: 18px;
+  }
+
+  .family-role {
+    font-size: 15px;
+  }
+
+  .family-name {
+    font-size: 18px;
+    letter-spacing: 0.055em;
+  }
+
+  .events .event-block > h2,
+  .infos > h2,
+  .rsvp > h2 {
+    font-size: 30px;
+  }
+
+  .infos .section-kicker,
+  .rsvp .section-kicker {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+  }
+
+  .event-date {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+
+  .event-hebrew-date {
+    font-size: 10px;
+  }
+
+  .event-time {
+    font-size: 18px;
+  }
+
+  .event-details,
+  .info-address,
+  .info-shared-location .info-address {
+    font-size: 17px;
+  }
+
+  .event-parasha-fr {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+  }
+
+  .event-parasha-he {
+    margin-top: 6px;
+    font-size: 20px;
+  }
+
+  .info-number {
+    font-size: 30px;
+  }
+
+  .info-location h3 {
+    font-size: 24px;
+  }
+
+  .rsvp-intro {
+    font-size: 18px;
+  }
+
+  .footer-message {
+    font-size: 18px;
+  }
+
+  .footer-contacts p {
+    font-size: 12px;
+  }
+
+}
