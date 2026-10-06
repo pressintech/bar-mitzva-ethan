@@ -47,64 +47,65 @@ h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(38px,8
 .rsvp{max-width:720px}.rsvp form{text-align:left;margin:45px auto 0}.rsvp label{display:block;font-size:11px;letter-spacing:.15em;margin:0 0 20px}.rsvp input,.rsvp select,.rsvp textarea{width:100%;margin-top:8px;border:1px solid #cdbb99;background:rgba(255,255,255,.3);padding:14px;font:inherit;color:var(--ink);outline:none}.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:15px}.rsvp button{width:100%;cursor:pointer;margin-top:5px;background:var(--ink);color:white}.form-message{min-height:20px;text-align:center;color:var(--gold);font-size:12px;margin-top:15px}
 footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.footer-monogram{font-size:95px;margin:0 0 12px}.footer h2{font-family:"Cormorant Garamond",serif;letter-spacing:.22em;font-weight:400}.footer-star{color:var(--gold);font-size:26px;margin-top:28px}
 @media(max-width:700px){.hero{padding:12px}.hero-frame{min-height:calc(100svh - 24px);padding:45px 18px}.monogram{font-size:125px}.date{font-size:82px}.date-caption{letter-spacing:.18em}.section{padding:80px 20px}.countdown{grid-template-columns:repeat(2,1fr)}.countdown div:nth-child(3){border-left:0;border-top:1px solid #d8c7a8}.countdown div:nth-child(4){border-top:1px solid #d8c7a8}.info-grid{grid-template-columns:1fr}.info-grid article{min-height:auto}.two-cols{grid-template-columns:1fr}}
-/* =========================================
+/* ========================================
    HERO — ETHAN TOBOUL
-   ========================================= */
+======================================== */
 
 .hero {
-  min-height: 100svh;
-  width: 100%;
-
   position: relative;
+  width: 100%;
+  min-height: 100svh;
   overflow: hidden;
 
   background-color: #080706;
-
-background-image:
-  linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)),
-  url("./assets/fond-ethan-sans-logo.png");
-
+  background-image: url("./assets/fond-ethan-sans-logo.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
+/* Assombrit légèrement le fond sans créer de voile gris */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  z-index: 0;
+  pointer-events: none;
+}
 
 .hero-frame {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   height: 100svh;
-  min-height: 650px;
+  min-height: 700px;
 
-  position: relative;
+  border: 1px solid rgba(201, 169, 106, 0.65);
+  box-sizing: border-box;
 }
 
 
-/* =========================================
-   בס״ד
-   ========================================= */
+/* ---------- בס״ד ---------- */
 
 .hero-bsd {
   position: absolute;
-
-  top: 30px;
+  top: 4.5%;
   left: 50%;
-
   transform: translateX(-50%);
 
-  width: min(320px, 70vw);
+  width: min(340px, 65vw);
 
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 18px;
 }
 
 .hero-bsd span {
   flex: 1;
-
   height: 1px;
-
   background: rgba(201, 169, 106, 0.55);
 }
 
@@ -114,126 +115,91 @@ background-image:
   color: #c9a96a;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-
-  letter-spacing: 1px;
+  line-height: 1;
 
   white-space: nowrap;
 }
 
 
-/* =========================================
-   TITRE
-   ========================================= */
+/* ---------- TITRE ---------- */
 
 .hero-title {
   position: absolute;
-
-  top: 12%;
+  top: 11%;
   left: 50%;
-
   transform: translateX(-50%);
 
   width: 100%;
-
   text-align: center;
 }
 
-
 .hero-eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 
   color: #c9a96a;
 
   font-family: "Inter", sans-serif;
-
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
-
   letter-spacing: 5px;
-
-  line-height: 1;
 }
-
 
 .hero-title h1 {
   margin: 0;
 
-  color: #e0c58c;
+  color: #dfc183;
 
   font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(48px, 6vw, 76px);
-
+  font-size: clamp(48px, 5.2vw, 72px);
   font-weight: 500;
 
   letter-spacing: 7px;
+  line-height: 1;
 
-  line-height: 0.95;
-
-  text-align: center;
-
-  text-shadow:
-    0 2px 15px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.7);
 }
 
 
-/* =========================================
-   LOGO
-   ========================================= */
+/* ---------- LOGO ---------- */
 
 .hero-logo {
   position: absolute;
 
-  top: 28%;
+  top: 31%;
   left: 50%;
-
   transform: translateX(-50%);
 
-  width: min(430px, 42vw);
-
-  aspect-ratio: 1 / 1;
+  width: min(330px, 30vw);
 
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  z-index: 2;
+  align-items: center;
 }
 
-
 .hero-logo img {
-  width: 100%;
-  height: 100%;
-
   display: block;
+
+  width: 100%;
+  height: auto;
 
   object-fit: contain;
 
-  object-position: center;
-
-  /* Le fichier contient le fond noir :
-     on utilise seulement son centre visuellement. */
-
-  mix-blend-mode: screen;
-
   filter:
-    brightness(1.05)
-    contrast(1.05);
+    brightness(0.95)
+    contrast(1.04)
+    drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
 }
 
 
-/* =========================================
-   DATE
-   ========================================= */
+/* ---------- DATE ---------- */
 
 .hero-date {
   position: absolute;
 
-  top: 73%;
+  top: 72%;
   left: 50%;
-
   transform: translateX(-50%);
 
   width: 100%;
@@ -241,37 +207,28 @@ background-image:
   text-align: center;
 }
 
-
 .hero-date p {
   margin: 0;
 
-  color: #e0c58c;
+  color: #d7b873;
 
   font-family: "Inter", sans-serif;
-
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
 
   letter-spacing: 4px;
 
-  line-height: 1;
-
   white-space: nowrap;
-
-  text-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 
-/* =========================================
-   DÉCOUVRIR L'INVITATION
-   ========================================= */
+/* ---------- DÉCOUVRIR ---------- */
 
 .hero-scroll {
   position: absolute;
 
   left: 50%;
-  bottom: 32px;
+  bottom: 4%;
 
   transform: translateX(-50%);
 
@@ -279,16 +236,14 @@ background-image:
   flex-direction: column;
   align-items: center;
 
+  color: #c9a96a;
   text-decoration: none;
 
   z-index: 5;
-
-  color: #c9a96a;
 }
 
-
 .hero-scroll-line {
-  width: 70px;
+  width: 60px;
   height: 1px;
 
   margin-bottom: 12px;
@@ -296,11 +251,10 @@ background-image:
   background: rgba(201, 169, 106, 0.65);
 }
 
-
 .hero-scroll-label {
   font-family: "Inter", sans-serif;
 
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 400;
 
   letter-spacing: 3px;
@@ -312,34 +266,99 @@ background-image:
     letter-spacing 0.3s ease;
 }
 
-
 .hero-scroll-arrow {
-  margin-top: 8px;
+  margin-top: 9px;
 
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 21px;
-  font-weight: 300;
-
+  font-size: 20px;
   line-height: 1;
 
-  transition:
-    transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
-
 
 .hero-scroll:hover {
-  color: #e0c58c;
+  color: #e6ca8d;
 }
-
-
-.hero-scroll:hover .hero-scroll-label {
-  letter-spacing: 3.5px;
-}
-
 
 .hero-scroll:hover .hero-scroll-arrow {
   transform: translateY(4px);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 100svh;
+    background-position: center center;
+  }
+
+  .hero-frame {
+    height: 100svh;
+    min-height: 620px;
+  }
+
+  .hero-bsd {
+    top: 3.5%;
+    width: 220px;
+    gap: 12px;
+  }
+
+  .hero-bsd p {
+    font-size: 12px;
+  }
+
+  .hero-title {
+    top: 11%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 9px;
+    font-size: 8px;
+    letter-spacing: 3.5px;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(38px, 10vw, 52px);
+    letter-spacing: 3px;
+  }
+
+  .hero-logo {
+    top: 30%;
+    width: min(285px, 66vw);
+  }
+
+  .hero-date {
+    top: 70%;
+  }
+
+  .hero-date p {
+    font-size: 8px;
+    letter-spacing: 2.2px;
+  }
+
+  .hero-scroll {
+    bottom: 3%;
+  }
+
+  .hero-scroll-line {
+    width: 48px;
+    margin-bottom: 9px;
+  }
+
+  .hero-scroll-label {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .hero-scroll-arrow {
+    margin-top: 7px;
+    font-size: 18px;
+  }
 }
 
 
