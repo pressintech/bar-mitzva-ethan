@@ -733,3 +733,177 @@ background-image:
   }
 
 }
+/* =========================================
+   RSVP
+   ========================================= */
+
+.rsvp {
+  min-height: 100svh;
+  padding: 120px 24px;
+
+  background:
+    linear-gradient(
+      rgba(8, 7, 6, 0.97),
+      rgba(8, 7, 6, 0.99)
+    ),
+    url("./assets/fond-logo-ethan.png");
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+}
+
+.rsvp .section-kicker {
+  margin: 0 0 18px;
+
+  color: #c9a96a;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.rsvp > h2 {
+  margin: 0;
+
+  color: #e0c58c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 6vw, 62px);
+  font-weight: 400;
+}
+
+.rsvp-intro {
+  max-width: 520px;
+  margin: 25px auto 55px;
+
+  color: rgba(235, 222, 193, 0.7);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+#rsvpForm {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+#rsvpForm label {
+  display: block;
+  margin-bottom: 26px;
+
+  color: #c9a96a;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 0;
+
+  border: none;
+  border-bottom: 1px solid rgba(201, 169, 106, 0.35);
+  border-radius: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: #eee1c4;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+
+  transition: border-color 0.25s ease;
+}
+
+#rsvpForm input::placeholder,
+#rsvpForm textarea::placeholder {
+  color: rgba(235, 222, 193, 0.35);
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  border-bottom-color: #c9a96a;
+}
+
+#rsvpForm select {
+  cursor: pointer;
+}
+
+#rsvpForm select option {
+  color: #080706;
+}
+
+#rsvpForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+#rsvpForm button {
+  display: block;
+  margin: 15px auto 0;
+  padding: 15px 28px;
+
+  border: 1px solid rgba(201, 169, 106, 0.65);
+
+  background: transparent;
+
+  color: #c9a96a;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+#rsvpForm button:hover {
+  background: #c9a96a;
+  color: #080706;
+}
+
+.form-message {
+  margin: 25px 0 0;
+
+  color: #c9a96a;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+
+  .rsvp {
+    padding: 100px 22px;
+  }
+
+  .rsvp > h2 {
+    font-size: 42px;
+  }
+
+  .rsvp-intro {
+    margin-bottom: 45px;
+    font-size: 17px;
+  }
+
+  .two-cols {
+    gap: 20px;
+  }
+
+}
