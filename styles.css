@@ -196,7 +196,7 @@ h1,h2,h3,p{margin-top:0}
 
 .hero-date {
   position: absolute;
-  top: 80%;
+  top: 84%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -226,8 +226,11 @@ h1,h2,h3,p{margin-top:0}
 
 .hero-scroll {
   position: absolute;
+
+  top: 91%;
   left: 50%;
-  bottom: 0.5%;
+  bottom: auto;
+
   transform: translateX(-50%);
 
   display: flex;
