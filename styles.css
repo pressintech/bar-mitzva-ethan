@@ -453,70 +453,117 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
 .invitation {
   min-height: 100svh;
   padding: 110px 24px 120px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
-
   background: rgba(5, 4, 3, 0.78);
+}
 
+.invitation-intro {
+  width: 100%;
+  max-width: 680px;
+}
+
+.invitation-intro p {
+  margin: 0;
+
+  color: rgba(235, 222, 193, 0.88);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 2.4vw, 27px);
+  font-weight: 400;
+  line-height: 1.55;
 }
 
 .family-names {
   width: 100%;
   max-width: 760px;
-  color: #d8bb7c;
+  margin-top: 48px;
 }
 
-.family-names p {
+.family-group + .family-group {
+  margin-top: 30px;
+}
+
+.family-role {
+  margin: 0 0 8px;
+
+  color: rgba(224, 197, 140, 0.62);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+
+.family-name {
   margin: 0;
+
+  color: #d8bb7c;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(15px, 2vw, 20px);
   font-weight: 500;
   letter-spacing: 2.8px;
-  line-height: 1.8;
-}
-
-.family-spacer {
-  height: 20px;
+  line-height: 1.65;
 }
 
 .invitation-line {
   width: 55px;
   height: 1px;
-  margin: 48px 0 42px;
+  margin: 46px 0 40px;
+
   background: #c9a96a;
   opacity: 0.75;
 }
 
 .invitation-text {
+  width: 100%;
   max-width: 680px;
 }
 
-.invitation-text p {
+.invitation-text > p:not(.invitation-closing) {
   margin: 0 auto;
+
   color: rgba(235, 222, 193, 0.88);
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(20px, 3vw, 28px);
+  font-size: clamp(20px, 2.5vw, 27px);
   font-weight: 400;
   line-height: 1.55;
 }
 
 .invitation-text h2 {
   margin: 34px 0 0;
+
   color: #e0c58c;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(42px, 7vw, 72px);
+  font-size: clamp(48px, 7vw, 76px);
   font-weight: 500;
   letter-spacing: 7px;
-  line-height: 1;
+  line-height: .95;
 }
 
 .invitation-text h2 span {
-  font-size: 0.72em;
+  display: block;
+  margin-top: 12px;
+
+  font-size: .58em;
   letter-spacing: 1px;
-  white-space: nowrap;
+  line-height: 1;
+}
+
+.invitation-closing {
+  max-width: 600px;
+  margin: 38px auto 0;
+
+  color: rgba(235, 222, 193, 0.68);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.55;
 }
 
 @media (max-width: 600px) {
@@ -525,31 +572,57 @@ footer{padding:80px 24px 50px;text-align:center;border-top:1px solid #d8c7a8}.fo
     padding: 90px 22px 100px;
   }
 
-  .family-names p {
-    font-size: 13px;
-    letter-spacing: 2px;
+  .invitation-intro p {
+    font-size: 20px;
+    line-height: 1.5;
   }
 
-  .family-spacer {
-    height: 14px;
+  .family-names {
+    margin-top: 38px;
+  }
+
+  .family-group + .family-group {
+    margin-top: 25px;
+  }
+
+  .family-role {
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+
+  .family-name {
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 1.7;
   }
 
   .invitation-line {
     margin: 38px 0 34px;
   }
 
-  .invitation-text p {
+  .invitation-text > p:not(.invitation-closing) {
     font-size: 20px;
     line-height: 1.5;
   }
 
   .invitation-text h2 {
     margin-top: 28px;
-    font-size: 42px;
+    font-size: 48px;
     letter-spacing: 4px;
   }
 
+  .invitation-text h2 span {
+    margin-top: 10px;
+    font-size: .62em;
+  }
+
+  .invitation-closing {
+    margin-top: 32px;
+    font-size: 17px;
+  }
+
 }
+
 /* =========================================
    ÉVÉNEMENTS — CÉLÉBRATION
    ========================================= */
