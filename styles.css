@@ -12,9 +12,12 @@ h1,h2,h3,p{margin-top:0}
   padding:24px;
   display:grid;
   place-items:center;
-  background-image:
-    linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)),
-    url("./assets/fond-logo-ethan.png");
+background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.28),
+    rgba(0, 0, 0, 0.28)
+  ),
+  url("./assets/fond-logo-ethan.png");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
