@@ -262,3 +262,114 @@ background-image:
   }
 
 }
+/* =========================================
+   INVITATION — FAMILLE & ETHAN
+   ========================================= */
+
+.invitation {
+  min-height: 100svh;
+  padding: 110px 24px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(8, 7, 6, 0.96),
+      rgba(8, 7, 6, 0.98)
+    ),
+    url("./assets/fond-logo-ethan.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.family-names {
+  width: 100%;
+  max-width: 760px;
+  color: #d8bb7c;
+}
+
+.family-names p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 500;
+  letter-spacing: 2.8px;
+  line-height: 1.8;
+}
+
+.family-spacer {
+  height: 20px;
+}
+
+.invitation-line {
+  width: 55px;
+  height: 1px;
+  margin: 48px 0 42px;
+  background: #c9a96a;
+  opacity: 0.75;
+}
+
+.invitation-text {
+  max-width: 680px;
+}
+
+.invitation-text p {
+  margin: 0 auto;
+  color: rgba(235, 222, 193, 0.88);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.invitation-text h2 {
+  margin: 34px 0 0;
+  color: #e0c58c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 500;
+  letter-spacing: 7px;
+  line-height: 1;
+}
+
+.invitation-text h2 span {
+  font-size: 0.72em;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+  .invitation {
+    padding: 90px 22px 100px;
+  }
+
+  .family-names p {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .family-spacer {
+    height: 14px;
+  }
+
+  .invitation-line {
+    margin: 38px 0 34px;
+  }
+
+  .invitation-text p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .invitation-text h2 {
+    margin-top: 28px;
+    font-size: 42px;
+    letter-spacing: 4px;
+  }
+
+}
