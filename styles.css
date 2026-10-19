@@ -1913,3 +1913,26 @@ text-align: center;
     display: initial;
   }
 }
+/* ACCUEIL MOBILE — HARMONISATION DES ESPACES */
+@media (max-width: 600px) {
+
+  /* Prénom et nom */
+  .hero-title {
+    top: 10.8%;
+  }
+
+  .hero-title h1 {
+    line-height: 1.04;
+  }
+
+  /* Monogramme doré */
+  .hero-logo {
+    top: 31%;
+  }
+
+  /* Date */
+  .hero-date {
+    top: 71%;
+  }
+
+}
