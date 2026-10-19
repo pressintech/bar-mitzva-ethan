@@ -1857,3 +1857,17 @@ text-align: center;
     background-color: rgba(5, 4, 3, 0.55);
   }
 }
+
+/* ACCUEIL MOBILE — AJUSTEMENT TITRE ET DATE */
+@media (max-width: 600px) {
+
+  .hero-title h1 {
+    font-size: clamp(30px, 8.5vw, 40px);
+  }
+
+  .hero-date p {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+  }
+
+}
