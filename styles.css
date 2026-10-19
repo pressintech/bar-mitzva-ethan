@@ -1870,3 +1870,39 @@ text-align: center;
     top: 67%;
   }
 }
+
+/* =========================================================
+   FOND MOBILE — MONOGRAMME ETHAN FLAMME
+   Uniquement mobile. Aucun changement desktop.
+   Le logo reste fixe et centré pendant le défilement.
+   ========================================================= */
+@media (max-width: 600px) {
+  body {
+    background: #050403 !important;
+    isolation: isolate;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(5, 4, 3, .53), rgba(5, 4, 3, .53)),
+      url("./assets/logo-ethan.png"),
+      url("./assets/fond-site-mobile.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center center, center center;
+    background-size: cover, min(70vw, 330px) auto, cover;
+  }
+
+  /* Les panneaux laissent apparaître subtilement le monogramme. */
+  .invitation,
+  .events,
+  .infos,
+  .rsvp,
+  .footer {
+    background-color: rgba(5, 4, 3, .55);
+  }
+}
