@@ -1,4 +1,4 @@
-const target = new Date("2026-12-24T10:00:00+01:00").getTime();
+const target = new Date("2026-12-24T08:45:00+01:00").getTime();
 
 function updateCountdown() {
   const diff = Math.max(0, target - Date.now());
