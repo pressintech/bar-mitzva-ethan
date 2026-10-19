@@ -1852,3 +1852,21 @@ text-align: center;
     margin-bottom: 34px !important;
   }
 }
+
+/* ==================================================
+   AJUSTEMENTS ACCUEIL MOBILE — OCTOBRE 2026
+   Version ordinateur inchangée
+================================================== */
+@media (max-width: 600px) {
+  .hero-title h1 {
+    font-size: clamp(32px, 9.1vw, 43px);
+  }
+
+  .hero-logo {
+    top: 27%;
+  }
+
+  .hero-date {
+    top: 67%;
+  }
+}
