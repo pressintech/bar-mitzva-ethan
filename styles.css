@@ -1894,3 +1894,22 @@ text-align: center;
     display: initial;
   }
 }
+/* ORDINATEUR : ETHAN TOBOUL SUR UNE LIGNE */
+.desktop-space {
+  display: inline;
+}
+
+.mobile-break {
+  display: none;
+}
+
+/* MOBILE : ETHAN ET TOBOUL SUR DEUX LIGNES */
+@media (max-width: 600px) {
+  .desktop-space {
+    display: none;
+  }
+
+  .mobile-break {
+    display: initial;
+  }
+}
