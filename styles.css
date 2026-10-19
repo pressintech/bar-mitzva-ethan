@@ -1874,3 +1874,40 @@ text-align: center;
     filter: drop-shadow(0 0 4px rgba(201, 169, 106, 0.22));
   }
 }
+
+
+/* =========================================================
+   CORRECTIFS DE STABILISATION — OCTOBRE 2026
+   Ne pas modifier la mise en page desktop validée.
+   ========================================================= */
+
+/* Le saut de ligne HTML doit rester invisible sur ordinateur. */
+br.mobile-break { display: none !important; }
+.desktop-space { display: inline; }
+
+/* Sur téléphone seulement : prénom et nom sur deux lignes. */
+@media (max-width: 600px) {
+  .desktop-space { display: none !important; }
+  br.mobile-break { display: block !important; }
+
+  .hero-title h1 {
+    font-size: 42px;
+    line-height: 1.04;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-title { top: 10.8%; }
+  .hero-logo { top: 31%; }
+  .hero-date { top: 71%; }
+  .hero-date p { font-size: 10px; letter-spacing: 0.24em; }
+
+  /* Les noms de famille tiennent sur une seule ligne. */
+  .family-name {
+    font-size: clamp(13px, 3.7vw, 16px);
+    letter-spacing: 0.025em;
+  }
+  .family-names { width: 100%; }
+}
