@@ -1858,94 +1858,19 @@ text-align: center;
   }
 }
 
-/* ACCUEIL MOBILE — AJUSTEMENT TITRE ET DATE */
+
+/* ÉTOILE DE DAVID DORÉE — SAFARI MOBILE UNIQUEMENT */
 @media (max-width: 600px) {
-
-  .hero-title h1 {
-    font-size: clamp(28px, 8vw, 38px);
+  .section-separator-star {
+    font-size: 0 !important; /* masque le glyphe affiché comme emoji violet */
+    line-height: 0;
   }
-
-  .hero-date p {
-    font-size: 10px;
-    letter-spacing: 0.24em;
+  .section-separator-star::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5 21 18H3L12 2.5Z M12 21.5 3 6h18l-9 15.5Z' fill='none' stroke='%23c9a96a' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E");
+    filter: drop-shadow(0 0 4px rgba(201, 169, 106, 0.22));
   }
-
-}
-/* ACCUEIL MOBILE — ETHAN ET TOBOUL SUR 2 LIGNES */
-@media (max-width: 600px) {
-
-  .hero-title h1 {
-    font-size: 42px;
-    line-height: 0.95;
-    letter-spacing: 0.08em;
-    white-space: normal;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-}
-/* Saut de ligne uniquement sur mobile */
-.mobile-break {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  .mobile-break {
-    display: initial;
-  }
-}
-/* ORDINATEUR : ETHAN TOBOUL SUR UNE LIGNE */
-.desktop-space {
-  display: inline;
-}
-
-.mobile-break {
-  display: none;
-}
-
-/* MOBILE : ETHAN ET TOBOUL SUR DEUX LIGNES */
-@media (max-width: 600px) {
-  .desktop-space {
-    display: none;
-  }
-
-  .mobile-break {
-    display: initial;
-  }
-}
-/* ACCUEIL MOBILE — HARMONISATION DES ESPACES */
-@media (max-width: 600px) {
-
-  /* Prénom et nom */
-  .hero-title {
-    top: 10.8%;
-  }
-
-  .hero-title h1 {
-    line-height: 1.04;
-  }
-
-  /* Monogramme doré */
-  .hero-logo {
-    top: 31%;
-  }
-
-  /* Date */
-  .hero-date {
-    top: 71%;
-  }
-
-}
-/* INVITATION MOBILE — NOMS DES GRANDS-PARENTS */
-@media (max-width: 600px) {
-
-  .family-name {
-    font-size: clamp(13px, 3.7vw, 16px);
-    letter-spacing: 0.025em;
-  }
-
-  .family-names {
-    width: 100%;
-  }
-
 }
