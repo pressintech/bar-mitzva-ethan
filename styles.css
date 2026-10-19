@@ -1936,3 +1936,16 @@ text-align: center;
   }
 
 }
+/* INVITATION MOBILE — NOMS DES GRANDS-PARENTS */
+@media (max-width: 600px) {
+
+  .family-name {
+    font-size: clamp(13px, 3.7vw, 16px);
+    letter-spacing: 0.025em;
+  }
+
+  .family-names {
+    width: 100%;
+  }
+
+}
