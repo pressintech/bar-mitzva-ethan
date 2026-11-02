@@ -1828,3 +1828,54 @@ br.mobile-break { display: none !important; }
   }
   .family-names { width: 100%; }
 }
+
+/* =========================================
+   BOUTON MUSICAL — ETHAN
+   ========================================= */
+
+#musicToggle {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  border: 1px solid #c9a96a;
+  border-radius: 50%;
+
+  background: rgba(5, 4, 3, 0.88);
+  color: #dfbd78;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+#musicToggle:hover {
+  background: #c9a96a;
+  color: #080706;
+}
+
+#musicToggle.is-playing {
+  box-shadow: 0 0 15px rgba(201, 169, 106, 0.45);
+}
+
+@media (max-width: 600px) {
+  #musicToggle {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
