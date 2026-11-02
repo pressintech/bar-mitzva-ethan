@@ -68,3 +68,69 @@ rsvpForm.addEventListener("submit", async (e) => {
     submitButton.textContent = "CONFIRMER MA RÉPONSE";
   }
 });
+
+/* =========================================
+   MUSIQUE DE FOND — ETHAN
+   ========================================= */
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (backgroundMusic && musicToggle) {
+  backgroundMusic.volume = 0.6;
+
+  function updateMusicButton() {
+    const playing = !backgroundMusic.paused;
+
+    musicToggle.classList.toggle("is-playing", playing);
+    musicToggle.setAttribute("aria-pressed", String(playing));
+    musicToggle.textContent = playing ? "♫" : "♪";
+    musicToggle.setAttribute(
+      "aria-label",
+      playing ? "Mettre la musique en pause" : "Lancer la musique"
+    );
+  }
+
+  async function startMusic() {
+    if (!backgroundMusic.paused) return;
+
+    try {
+      await backgroundMusic.play();
+    } catch (error) {
+      // Certains navigateurs exigent une interaction.
+    }
+
+    updateMusicButton();
+  }
+
+  musicToggle.addEventListener("click", async () => {
+    if (backgroundMusic.paused) {
+      await startMusic();
+    } else {
+      backgroundMusic.pause();
+      updateMusicButton();
+    }
+  });
+
+  // Tentative de lecture dès l'ouverture du site.
+  startMusic();
+
+  // Si la lecture automatique est bloquée,
+  // démarrer lors de la première interaction.
+  function startOnInteraction() {
+    startMusic();
+  }
+
+  document.addEventListener("pointerdown", startOnInteraction, {
+    once: true
+  });
+
+  document.addEventListener("keydown", startOnInteraction, {
+    once: true
+  });
+
+  backgroundMusic.addEventListener("play", updateMusicButton);
+  backgroundMusic.addEventListener("pause", updateMusicButton);
+
+  updateMusicButton();
+}
